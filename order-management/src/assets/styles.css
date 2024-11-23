@@ -1,0 +1,108 @@
+/* src/assets/styles.css */
+
+/* Definición de colores para la app */
+:root {
+    --primary-color: #4a90e2; /* Azul moderno */
+    --accent-color: #ff6f61; /* Rojo coral suave */
+    --bg-color: #f4f5f7; /* Fondo suave */
+    --input-bg: #ffffff;
+    --text-color: #333;
+    --button-hover: #357ab8; /* Más oscuro para efecto hover */
+}
+
+/* Estilos Globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--input-bg);
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Títulos */
+h2,
+h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Input Field Styles */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    background: var(--input-bg);
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+input:focus {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--button-hover);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Animaciones Sutiles */
+.order-form,
+.order-detail-form {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
